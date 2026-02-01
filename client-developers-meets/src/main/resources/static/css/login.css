@@ -127,6 +127,16 @@ body {
     padding: 24px 96px 24px 24px;
 }
 
+.page-center {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.page-center {
+    align-items: center;
+    justify-content: center;
+}
+
 /* login/signup card */
 .card {
     width: 100%;
