@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Signup — Client & Developers Meets</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/login-form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- top navbar -->
+    <header class="navbar" role="banner">
+        <a href="/" class="navbar-brand">
+            <img src="/images/logo.png" alt="">
+            <span>CLIENT & DEVELOPERS MEETS</span>
+        </a>
+        <nav class="navbar-nav" aria-label="Main">
+            <a href="/">Home</a>
+            <a href="/login/client">Client Login</a>
+            <a href="/login/developer">Developer Login</a>
+        </nav>
+    </header>
+    <div class="page">
+        <main class="card card-form">
+            <!-- back to login options -->
+            <a href="/" class="back-link">← Back to login options</a>
+            <div class="logo-block logo-block-sm">
+                <img class="logo-icon logo-icon-sm" src="/images/logo.png" alt="Client & Developers Meets Logo">
+                <h1 class="brand">CLIENT & DEVELOPERS MEETS</h1>
+                <p class="tagline">Sign up as Client</p>
+            </div>
+            <!-- client signup form -->
+            <form class="login-form" action="#" method="post" id="client-signup-form">
+                <input type="hidden" name="signupType" value="client">
+                <label class="label" for="client-name">Full Name</label>
+                <input class="input" id="client-name" name="name" type="text" placeholder="John Doe" required autocomplete="name">
+                <label class="label" for="client-email">Email</label>
+                <input class="input" id="client-email" name="email" type="email" placeholder="you@example.com" required autocomplete="email">
+                <label class="label" for="client-password">Password</label>
+                <input class="input" id="client-password" name="password" type="password" placeholder="••••••••" required autocomplete="new-password">
+                <label class="label" for="client-confirm-password">Confirm Password</label>
+                <input class="input" id="client-confirm-password" name="confirmPassword" type="password" placeholder="••••••••" required autocomplete="new-password">
+                <button type="submit" class="btn btn-primary">Sign up</button>
+            </form>
+            <!-- link to sign in -->
+            <p class="form-footer">
+                Already have an account? <a href="/login/client">Sign in</a>
+            </p>
+        </main>
+    </div>
+    <!-- site footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Client &amp; Developers Meets. <a href="/">Home</a></p>
+    </footer>
+    <script src="/js/signup.js"></script>
+</body>
+</html>
