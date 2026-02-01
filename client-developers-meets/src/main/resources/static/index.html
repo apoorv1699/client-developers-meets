@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta and styles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — Client & Developers Meets</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- top navbar -->
+    <header class="navbar" role="banner">
+        <a href="/" class="navbar-brand">
+            <img src="/images/logo.png" alt="">
+            <span>CLIENT & DEVELOPERS MEETS</span>
+        </a>
+        <nav class="navbar-nav" aria-label="Main">
+            <a href="/">Home</a>
+            <a href="/login/client">Client Login</a>
+            <a href="/login/developer">Developer Login</a>
+        </nav>
+    </header>
+    <div class="page">
+        <main class="card">
+            <!-- logo and brand -->
+            <div class="logo-block">
+                <img class="logo-icon" src="/images/logo.png" alt="Client & Developers Meets Logo">
+                <h1 class="brand">CLIENT & DEVELOPERS MEETS</h1>
+                <p class="tagline">Choose how you want to sign in</p>
+            </div>
+
+            <!-- client / developer choice -->
+            <div class="options">
+                <a href="/login/client" class="option client" id="client-option">
+                    <span class="option-icon" aria-hidden="true">👤</span>
+                    <span class="option-label">Client</span>
+                    <span class="option-desc">Sign in as a client</span>
+                </a>
+                <a href="/login/developer" class="option developer" id="developer-option">
+                    <span class="option-icon" aria-hidden="true">⚙</span>
+                    <span class="option-label">Developer</span>
+                    <span class="option-desc">Sign in as a developer</span>
+                </a>
+            </div>
+        </main>
+        <!-- page footer -->
+        <footer class="footer">
+            <p>Client & Developers Meets</p>
+        </footer>
+    </div>
+    <!-- site footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Client &amp; Developers Meets. <a href="/">Home</a></p>
+    </footer>
+    <script src="/js/login.js"></script>
+</body>
+</html>
