@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cd_platform
+    username: root
+    password: Apoorv@8806
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  web:
+    resources:
+      cache:
+        period: 0
+      chain:
+        cache: false
+
+server:
+  port: 8082

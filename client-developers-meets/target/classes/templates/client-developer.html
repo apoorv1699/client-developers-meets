@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Profile - C&D</title>
+    <link rel="stylesheet" th:href="@{/assets/css/styles.css}" href="/assets/css/styles.css" />
+  </head>
+  <body data-page="client-developer">
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="/">
+          <span class="brand-mark">C&amp;D</span>
+          <span>Developer Profile</span>
+        </a>
+        <nav class="nav-links">
+          <a href="/client/home">Dashboard</a>
+          <a href="/client/developers">Developers</a>
+          <a href="/client/messages">Messages</a>
+        </nav>
+        <div class="nav-actions">
+          <span class="role-chip" data-role-chip>Client</span>
+          <a class="btn btn-ghost" href="/login">Sign out</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container grid grid-2">
+        <section class="card">
+          <div id="dev-profile-header" class="dev-header"></div>
+          <div class="divider"></div>
+          <h3 class="card-title">About</h3>
+          <p id="dev-bio" class="muted"></p>
+          <h3 class="card-title" style="margin-top: 1.5rem;">Core skills</h3>
+          <div id="dev-skills" class="tag-list" style="margin-top: 0.75rem;"></div>
+        </section>
+        <aside class="card">
+          <div class="card-title">Project fit</div>
+          <p class="muted">
+            This developer specializes in MVP delivery and product UX. Use chat to align on scope and timeline.
+          </p>
+          <div class="divider"></div>
+          <div class="muted">Availability</div>
+          <div style="font-weight: 600; margin-bottom: 1rem;">Next 2 weeks</div>
+          <a class="btn btn-primary" href="/client/messages">Start chat</a>
+          <a class="btn btn-secondary" href="/client/developers" style="margin-top: 0.75rem;">Back to list</a>
+          <div class="divider"></div>
+          <div class="card-title">Send inquiry</div>
+          <p class="muted">Share a quick summary so the developer can respond.</p>
+          <textarea class="textarea" rows="4" data-inquiry-summary placeholder="Project summary..."></textarea>
+          <button class="btn btn-primary" type="button" data-send-inquiry style="margin-top: 0.75rem;">
+            Submit inquiry
+          </button>
+        </aside>
+      </div>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="card-title">Portfolio highlights</h2>
+          <div id="dev-portfolio" class="grid grid-3" style="margin-top: 1.5rem;"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="card-title">Client reviews</h2>
+          <div id="dev-reviews" class="grid grid-2" style="margin-top: 1.5rem;"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="muted">Demo profile populated with mock data.</div>
+      </div>
+    </footer>
+
+    <script th:src="@{/assets/js/data.js}" src="/assets/js/data.js"></script>
+    <script th:src="@{/assets/js/app.js}" src="/assets/js/app.js"></script>
+  </body>
+</html>
+

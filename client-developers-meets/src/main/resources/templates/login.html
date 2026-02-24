@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C&D Login</title>
+    <link rel="stylesheet" th:href="@{/assets/css/styles.css}" href="/assets/css/styles.css" />
+  </head>
+  <body data-page="login">
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="/">
+          <span class="brand-mark">C&amp;D</span>
+          <span>Client &amp; Developer</span>
+        </a>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="/">Back to home</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container login-layout">
+        <section>
+          <span class="badge">Demo access</span>
+          <h1 class="hero-title">Welcome back to C&amp;D.</h1>
+          <p class="muted">
+            Choose a role and experience the curated platform. Payments are handled directly between clients and
+            developers, no gateway required.
+          </p>
+          <div class="card" style="margin-top: 2rem;">
+            <div class="card-title">Why teams choose C&amp;D</div>
+            <ul class="muted" style="margin: 1rem 0 0; padding-left: 1.2rem;">
+              <li>Curated developer profiles with rich portfolios</li>
+              <li>Direct chat collaboration built in</li>
+              <li>Role-specific dashboards and insights</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-title">Welcome back</div>
+          <p class="muted">Log in or create a new account to get started.</p>
+
+          <div class="role-toggle auth-tabs" style="margin: 1.5rem 0;">
+            <button type="button" data-auth-tab="login" class="is-active">Log in</button>
+            <button type="button" data-auth-tab="signup">Sign up</button>
+          </div>
+
+          <form id="login-form" data-auth-view="login">
+            <div class="form-group">
+              <label for="login-email">Email</label>
+              <input class="input" id="login-email" name="email" type="email" placeholder="you@company.com" />
+            </div>
+            <div class="form-group">
+              <label for="login-password">Password</label>
+              <input class="input" id="login-password" name="password" type="password" placeholder="********" />
+            </div>
+            <div class="form-group" style="display: flex; align-items: center; gap: 0.5rem;">
+              <input id="remember" type="checkbox" />
+              <label for="remember" class="muted">Remember me</label>
+            </div>
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="submit">Log in</button>
+            </div>
+          </form>
+
+          <form id="signup-form" data-auth-view="signup" style="display: none;">
+            <div class="card-title" style="margin-bottom: 0.5rem;">Create account</div>
+            <div class="role-toggle" style="margin: 1rem 0;">
+              <button type="button" data-role="client" class="is-active">Client</button>
+              <button type="button" data-role="developer">Developer</button>
+            </div>
+            <div class="form-group">
+              <label for="signup-email">Email</label>
+              <input class="input" id="signup-email" type="email" placeholder="you@company.com" />
+            </div>
+            <div class="form-group">
+              <label for="signup-password">Password</label>
+              <input class="input" id="signup-password" type="password" placeholder="Choose a password" />
+            </div>
+
+            <div data-role-fields="client">
+              <div class="form-group">
+                <label for="company-name">Company name</label>
+                <input class="input" id="company-name" type="text" placeholder="Nimbus Health" />
+              </div>
+              <div class="form-group">
+                <label for="client-industry">Industry</label>
+                <input class="input" id="client-industry" type="text" placeholder="Healthcare" />
+              </div>
+              <div class="form-group">
+                <label for="client-budget">Budget range</label>
+                <input class="input" id="client-budget" type="text" placeholder="$15k-$25k" />
+              </div>
+            </div>
+
+            <div data-role-fields="developer" style="display: none;">
+              <div class="form-group">
+                <label for="dev-name">Full name</label>
+                <input class="input" id="dev-name" type="text" placeholder="Aisha Khan" />
+              </div>
+              <div class="form-group">
+                <label for="dev-title">Title</label>
+                <input class="input" id="dev-title" type="text" placeholder="Full-Stack Developer" />
+              </div>
+              <div class="form-group">
+                <label for="dev-skills">Skills</label>
+                <input class="input" id="dev-skills" type="text" placeholder="React, Spring Boot, MySQL" />
+              </div>
+              <div class="form-group">
+                <label for="dev-rate">Hourly rate</label>
+                <input class="input" id="dev-rate" type="text" placeholder="$55/hr" />
+              </div>
+              <div class="form-group">
+                <label for="dev-location">Location</label>
+                <input class="input" id="dev-location" type="text" placeholder="Karachi, PK" />
+              </div>
+              <div class="form-group">
+                <label for="dev-availability">Availability</label>
+                <input class="input" id="dev-availability" type="text" placeholder="Available now" />
+              </div>
+              <div class="form-group">
+                <label for="dev-bio">Bio</label>
+                <textarea class="textarea" id="dev-bio" rows="3" placeholder="Short bio..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="project-title">First project (optional)</label>
+                <input class="input" id="project-title" type="text" placeholder="Project title" />
+              </div>
+              <div class="form-group">
+                <label for="project-description">Project description</label>
+                <textarea class="textarea" id="project-description" rows="2" placeholder="Project summary"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="project-stack">Project tech stack</label>
+                <input class="input" id="project-stack" type="text" placeholder="React, Spring Boot" />
+              </div>
+              <div class="form-group">
+                <label for="project-image">Project image URL</label>
+                <input class="input" id="project-image" type="text" placeholder="https://..." />
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="submit">Create account</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <script th:src="@{/assets/js/data.js}" src="/assets/js/data.js"></script>
+    <script th:src="@{/assets/js/app.js}" src="/assets/js/app.js"></script>
+  </body>
+</html>
+

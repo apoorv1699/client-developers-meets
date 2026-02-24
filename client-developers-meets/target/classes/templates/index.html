@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C&D - Where Client and Developer Meet</title>
+    <link rel="stylesheet" th:href="@{/assets/css/styles.css}" href="/assets/css/styles.css" />
+  </head>
+  <body data-page="landing">
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="/">
+          <span class="brand-mark">C&amp;D</span>
+          <span>Client &amp; Developer</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#how">How it works</a>
+          <a href="#roles">Choose a role</a>
+          <a href="#stories">Stories</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="/login">Log in</a>
+          <a class="btn btn-primary" href="/login">Get started</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container hero">
+          <div>
+            <span class="badge">Where client ambition meets developer craft</span>
+            <h1 class="hero-title">Ship your next product with vetted builders and bold teams.</h1>
+            <p>
+              C&amp;D is the premium collaboration space where clients find trusted developers and developers
+              grow their practice. Curate, connect, and kick off confidently.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" data-role-select data-role="client" href="/login?role=client">I'm a Client</a>
+              <a class="btn btn-secondary" data-role-select data-role="developer" href="/login?role=developer"
+                >I'm a Developer</a
+              >
+            </div>
+            <div class="stats" style="margin-top: 2rem;">
+              <div class="stat-card">
+                <div class="stat-value">250+</div>
+                <div class="muted">Curated developers</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">48 hrs</div>
+                <div class="muted">Avg match time</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">4.9/5</div>
+                <div class="muted">Client satisfaction</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="card">
+              <div class="card-title">Live project room</div>
+              <p class="muted">Track scope, timelines, and deliverables in one shared workspace.</p>
+            </div>
+            <div class="card">
+              <div class="card-title">Human-first matching</div>
+              <p class="muted">Hand-picked developers who align with your product goals and culture.</p>
+            </div>
+            <div class="card">
+              <div class="card-title">Built for partnerships</div>
+              <p class="muted">Clients and developers deal directly on payments and process.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="container">
+          <div class="grid grid-3 stagger">
+            <div class="card">
+              <div class="card-title">Profiles that tell the full story</div>
+              <p class="muted">Showcase resumes, portfolios, and availability with clarity.</p>
+            </div>
+            <div class="card">
+              <div class="card-title">Curated discovery</div>
+              <p class="muted">Search by stack, rate, location, and domain experience.</p>
+            </div>
+            <div class="card">
+              <div class="card-title">Direct collaboration</div>
+              <p class="muted">Chat with teams, align on scope, and build trust fast.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="roles">
+        <div class="container grid grid-2">
+          <div class="card">
+            <span class="badge">For Clients</span>
+            <h3 class="card-title">Find a dedicated developer crew in days, not weeks.</h3>
+            <p class="muted">
+              Review curated profiles, browse portfolios, and start conversations instantly. Payments are handled
+              directly between you and the developer.
+            </p>
+            <a class="btn btn-primary" data-role-select data-role="client" href="/login?role=client">Explore developers</a>
+          </div>
+          <div class="card">
+            <span class="badge">For Developers</span>
+            <h3 class="card-title">Build a standout profile that attracts premium clients.</h3>
+            <p class="muted">
+              Highlight your skills, showcase your portfolio, and manage incoming leads from a single dashboard.
+            </p>
+            <a class="btn btn-secondary" data-role-select data-role="developer" href="/login?role=developer">Create your profile</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="container">
+          <div class="grid grid-3 stagger">
+            <div class="card">
+              <div class="card-title">1. Choose your flow</div>
+              <p class="muted">Clients post goals and browse developers. Developers build a polished profile.</p>
+            </div>
+            <div class="card">
+              <div class="card-title">2. Match and chat</div>
+              <p class="muted">Start conversations, align on scope, and settle on milestones.</p>
+            </div>
+            <div class="card">
+              <div class="card-title">3. Deliver together</div>
+              <p class="muted">Collaborate directly, track progress, and celebrate the launch.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="stories">
+        <div class="container grid grid-3">
+          <div class="card">
+            <div class="card-title">"We shipped in 5 weeks."</div>
+            <p class="muted">Nimbus Health matched with a backend team and launched a secure patient portal.</p>
+          </div>
+          <div class="card">
+            <div class="card-title">"Best developer onboarding."</div>
+            <p class="muted">Maya built a profile and received 3 premium leads in the first week.</p>
+          </div>
+          <div class="card">
+            <div class="card-title">"A genuine partnership."</div>
+            <p class="muted">Orbit Foods worked directly with a full-stack builder to scale their MVP.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container card" style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between;">
+          <div>
+            <h3 class="card-title">Ready to meet your next collaborator?</h3>
+            <p class="muted">Join C&amp;D and start building with clarity and confidence.</p>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/login?role=client">Start as a client</a>
+            <a class="btn btn-secondary" href="/login?role=developer">Start as a developer</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="muted">C&amp;D - Where Client and Developer Meet. Demo build with mock data.</div>
+      </div>
+    </footer>
+
+    <script th:src="@{/assets/js/data.js}" src="/assets/js/data.js"></script>
+    <script th:src="@{/assets/js/app.js}" src="/assets/js/app.js"></script>
+  </body>
+</html>
+

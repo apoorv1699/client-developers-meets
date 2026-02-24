@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Profile - C&D</title>
+    <link rel="stylesheet" th:href="@{/assets/css/styles.css}" href="/assets/css/styles.css" />
+  </head>
+  <body data-page="developer-profile">
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="/">
+          <span class="brand-mark">C&amp;D</span>
+          <span>Developer Profile</span>
+        </a>
+        <nav class="nav-links">
+          <a href="/developer/home">Dashboard</a>
+          <a href="/developer/profile">Profile</a>
+          <a href="/developer/portfolio">Portfolio</a>
+          <a href="/developer/messages">Messages</a>
+        </nav>
+        <div class="nav-actions">
+          <span class="role-chip" data-role-chip>Developer</span>
+          <a class="btn btn-ghost" href="/login">Sign out</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container grid grid-2">
+        <section class="card">
+          <div class="card-title">Edit your profile</div>
+          <p class="muted">Keep your details accurate to attract the right clients.</p>
+          <form style="margin-top: 1.5rem;">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dev-name">Full name</label>
+                <input class="input" id="dev-name" data-dev-field="name" type="text" />
+              </div>
+              <div class="form-group">
+                <label for="dev-title">Title</label>
+                <input class="input" id="dev-title" data-dev-field="title" type="text" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dev-location">Location</label>
+                <input class="input" id="dev-location" data-dev-field="location" type="text" />
+              </div>
+              <div class="form-group">
+                <label for="dev-rate">Hourly rate</label>
+                <input class="input" id="dev-rate" data-dev-field="rate" type="text" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="dev-availability">Availability</label>
+              <input class="input" id="dev-availability" data-dev-field="availability" type="text" />
+            </div>
+            <div class="form-group">
+              <label for="dev-skills">Skills (comma separated)</label>
+              <input class="input" id="dev-skills" data-dev-field="skills" type="text" />
+            </div>
+            <div class="form-group">
+              <label for="dev-bio">Bio</label>
+              <textarea class="textarea" id="dev-bio" data-dev-field="bio" rows="4"></textarea>
+            </div>
+            <button class="btn btn-primary" type="button" data-save-profile>Save changes</button>
+          </form>
+        </section>
+
+        <aside class="card">
+          <div class="card-title">Profile checklist</div>
+          <ul class="muted" style="margin: 1rem 0 0; padding-left: 1.2rem;">
+            <li>Upload resume PDF</li>
+            <li>Update portfolio projects</li>
+            <li>Add 3+ skill tags</li>
+            <li>Set your availability</li>
+          </ul>
+          <div class="divider"></div>
+          <div class="card-title">Resume placeholder</div>
+          <p class="muted">Upload your resume to boost trust. (Demo only)</p>
+          <button class="btn btn-secondary" type="button">Upload resume</button>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="muted">Profile editor is mock-only for the demo.</div>
+      </div>
+    </footer>
+
+    <script th:src="@{/assets/js/data.js}" src="/assets/js/data.js"></script>
+    <script th:src="@{/assets/js/app.js}" src="/assets/js/app.js"></script>
+  </body>
+</html>
+

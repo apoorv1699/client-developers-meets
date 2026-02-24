@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Portfolio - C&D</title>
+    <link rel="stylesheet" th:href="@{/assets/css/styles.css}" href="/assets/css/styles.css" />
+  </head>
+  <body data-page="developer-portfolio">
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="/">
+          <span class="brand-mark">C&amp;D</span>
+          <span>Developer Portfolio</span>
+        </a>
+        <nav class="nav-links">
+          <a href="/developer/home">Dashboard</a>
+          <a href="/developer/profile">Profile</a>
+          <a href="/developer/portfolio">Portfolio</a>
+          <a href="/developer/messages">Messages</a>
+        </nav>
+        <div class="nav-actions">
+          <span class="role-chip" data-role-chip>Developer</span>
+          <a class="btn btn-ghost" href="/login">Sign out</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="hero" style="grid-template-columns: 1fr;">
+          <div>
+            <span class="badge">Portfolio</span>
+            <h1 class="hero-title">Showcase your best work</h1>
+            <p class="muted">Use strong visuals and outcomes to impress new clients.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#add-project">Add project</a>
+              <button class="btn btn-secondary" type="button">Reorder</button>
+            </div>
+          </div>
+        </div>
+
+        <section id="add-project" class="card" style="margin-top: 2rem;">
+          <div class="card-title">Add a portfolio project</div>
+          <p class="muted">This will create a new project and show it in your grid.</p>
+          <div class="form-row" style="margin-top: 1rem;">
+            <div class="form-group">
+              <label for="portfolio-title">Project title</label>
+              <input class="input" id="portfolio-title" data-portfolio-title type="text" placeholder="Project name" />
+            </div>
+            <div class="form-group">
+              <label for="portfolio-stack">Tech stack</label>
+              <input class="input" id="portfolio-stack" data-portfolio-stack type="text" placeholder="React, Spring Boot" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="portfolio-description">Description</label>
+            <textarea class="textarea" id="portfolio-description" data-portfolio-description rows="3"
+              placeholder="Short summary of the project..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="portfolio-image">Image URL (optional)</label>
+            <input class="input" id="portfolio-image" data-portfolio-image type="text" placeholder="https://..." />
+          </div>
+          <button class="btn btn-primary" type="button" data-add-portfolio>Add project</button>
+        </section>
+
+        <div id="developer-portfolio-grid" class="grid grid-3" style="margin-top: 2rem;"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="muted">Portfolio grid populated with mock projects.</div>
+      </div>
+    </footer>
+
+    <script th:src="@{/assets/js/data.js}" src="/assets/js/data.js"></script>
+    <script th:src="@{/assets/js/app.js}" src="/assets/js/app.js"></script>
+  </body>
+</html>
+

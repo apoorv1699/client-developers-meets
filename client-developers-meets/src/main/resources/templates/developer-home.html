@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Dashboard - C&D</title>
+    <link rel="stylesheet" th:href="@{/assets/css/styles.css}" href="/assets/css/styles.css" />
+  </head>
+  <body data-page="developer-home">
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="/">
+          <span class="brand-mark">C&amp;D</span>
+          <span>Developer Dashboard</span>
+        </a>
+        <nav class="nav-links">
+          <a href="/developer/home">Dashboard</a>
+          <a href="/developer/profile">Profile</a>
+          <a href="/developer/portfolio">Portfolio</a>
+          <a href="/developer/messages">Messages</a>
+        </nav>
+        <div class="nav-actions">
+          <span class="role-chip" data-role-chip>Developer</span>
+          <a class="btn btn-ghost" href="/login">Sign out</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-tight">
+        <div class="container hero" style="align-items: stretch;">
+          <div>
+            <span class="badge">Developer workspace</span>
+            <h1 class="hero-title">Keep your profile sharp and leads warm.</h1>
+            <p class="muted">
+              Track opportunities, update your availability, and keep conversations moving with clients.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="/developer/profile">Edit profile</a>
+              <a class="btn btn-secondary" href="/developer/portfolio">Manage portfolio</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">This week</div>
+            <div class="stats" style="margin-top: 1.5rem;">
+              <div class="stat-card">
+                <div class="stat-value">6</div>
+                <div class="muted">Profile views</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">3</div>
+                <div class="muted">New leads</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">2</div>
+                <div class="muted">Active chats</div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="muted">Tip: update your portfolio to boost ranking.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="card-title">Latest leads</div>
+          <p class="muted">Stay responsive to increase match success.</p>
+          <div class="card" style="margin-top: 1.5rem;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Client</th>
+                  <th>Project</th>
+                  <th>Budget</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="lead-rows"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="muted">Demo dashboard populated with mock leads.</div>
+      </div>
+    </footer>
+
+    <script th:src="@{/assets/js/data.js}" src="/assets/js/data.js"></script>
+    <script th:src="@{/assets/js/app.js}" src="/assets/js/app.js"></script>
+  </body>
+</html>
+

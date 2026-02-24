@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Developers - C&D</title>
+    <link rel="stylesheet" th:href="@{/assets/css/styles.css}" href="/assets/css/styles.css" />
+  </head>
+  <body data-page="client-developers">
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="/">
+          <span class="brand-mark">C&amp;D</span>
+          <span>Developer Marketplace</span>
+        </a>
+        <nav class="nav-links">
+          <a href="/client/home">Dashboard</a>
+          <a href="/client/developers">Developers</a>
+          <a href="/client/messages">Messages</a>
+        </nav>
+        <div class="nav-actions">
+          <span class="role-chip" data-role-chip>Client</span>
+          <a class="btn btn-ghost" href="/login">Sign out</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="hero" style="grid-template-columns: 1fr;">
+          <div>
+            <span class="badge">Find your team</span>
+            <h1 class="hero-title">Browse curated developers</h1>
+            <p class="muted">Filter by core skills to find the right partner for your product goals.</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 2rem;">
+          <div class="card-title">Quick filters</div>
+          <div class="tag-list" style="margin-top: 1rem;">
+            <button class="tag" data-skill="React">React</button>
+            <button class="tag" data-skill="Spring Boot">Spring Boot</button>
+            <button class="tag" data-skill="MySQL">MySQL</button>
+            <button class="tag" data-skill="Vue">Vue</button>
+            <button class="tag" data-skill="Design Systems">Design Systems</button>
+            <button class="tag" data-skill="AWS">AWS</button>
+          </div>
+        </div>
+
+        <div id="client-developer-list" class="grid grid-3" style="margin-top: 2rem;"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="muted">Tip: click a developer to open their full profile.</div>
+      </div>
+    </footer>
+
+    <script th:src="@{/assets/js/data.js}" src="/assets/js/data.js"></script>
+    <script th:src="@{/assets/js/app.js}" src="/assets/js/app.js"></script>
+  </body>
+</html>
+
